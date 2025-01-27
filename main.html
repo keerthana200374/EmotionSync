@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmotionSync</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        header {
+            background-color:rgb(30, 68, 237);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+        }
+        .playlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .playlist-item {
+            background-color: #282828;
+            padding: 15px;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .playlist-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .playlist-item h3 {
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #282828;
+            text-align: center;
+            padding: 10px;
+            color: #b3b3b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">EmotionSync</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Search</a>
+            <a href="#">Library</a>
+            <a href="{{ url_for('login')}}">Logout</a>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>Welcome to EmotionSync</h1>
+        <div class="playlist">
+            <div class="playlist-item">
+                <img src="https://via.placeholder.com/200" alt="Playlist 1">
+                <h3>Top Hits</h3>
+                <p>Your daily mix of trending tracks.</p>
+            </div>
+            <div class="playlist-item">
+                <img src="https://via.placeholder.com/200" alt="Playlist 2">
+                <h3>Chill Vibes</h3>
+                <p>Relax with smooth, laid-back tunes.</p>
+            </div>
+            <div class="playlist-item">
+                <img src="https://via.placeholder.com/200" alt="Playlist 3">
+                <h3>Workout Beats</h3>
+                <p>Stay energized with upbeat songs.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
